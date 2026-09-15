@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { CONFIG, whatsappLink } from "./config";
 import { useReveal } from "./useReveal";
+import sharkHero from "./assets/shark-hero.jpg";
+import richardImg from "./assets/richard.jpg";
 
 /* ----------------------------- Ícones simples ----------------------------- */
 const WhatsIcon = ({ className = "" }: { className?: string }) => (
@@ -122,7 +124,7 @@ function Hero() {
         <div className="relative">
           <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-tr from-emerald-500/20 to-amber-400/20 blur-2xl" />
           <img
-            src="/images/shark-hero.png"
+            src={sharkHero}
             alt="Bot Tubarão"
             className="animate-float w-full rounded-[2rem] border border-white/10 shadow-2xl"
           />
@@ -228,7 +230,7 @@ function About() {
       <div className="grid items-center gap-12 lg:grid-cols-2">
         <div className="reveal relative">
           <div className="absolute inset-0 -z-10 rounded-[2rem] bg-gradient-to-tr from-amber-400/20 to-emerald-500/10 blur-2xl" />
-          <img src="/images/richard.png" alt={CONFIG.nome} className="w-full rounded-[2rem] border border-white/10 shadow-2xl" />
+          <img src={richardImg} alt={CONFIG.nome} className="w-full rounded-[2rem] border border-white/10 shadow-2xl" />
         </div>
         <div className="reveal">
           <span className="text-sm font-bold uppercase tracking-widest text-amber-300">Quem sou eu</span>
